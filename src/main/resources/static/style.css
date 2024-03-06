@@ -1,0 +1,21 @@
+body {
+    background-color: #88BDBC;
+}
+
+h1, p {
+    color: #254E58;
+    font-family: cursive;
+}
+
+u {
+    text-decoration: underline;
+}
+
+table, th, td {
+    border: 3px solid;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-family: cursive;
+    color: #4F4A41;
+}

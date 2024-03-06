@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Диагностика автомобилей</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1>Таблица результатов диагностики автомобилей</h1>
+<table>
+    <tr>
+        <th>VIN</th>
+        <th>Гос. номер</th>
+        <th>Фамилия владельца</th>
+        <th>Номер констр. группы</th>
+        <th>Имя констр. группы</th>
+        <th>Результат диагностики</th>
+        <th>Исполнитель</th>
+        <th>Дата</th>
+    </tr>
+    <tr th:each="repair: ${repairs}">
+        <td th:text="${repair.getCarVin()}"></td>
+        <td th:text="${repair.getCarRegistrationNumber()}"></td>
+        <td th:text="${repair.getCarOwnerName()}"></td>
+        <td th:text="${repair.getConstructionGroupNumber()}"></td>
+        <td th:text="${repair.getConstructionGroupName()}"></td>
+        <td th:text="${repair.getRepairReport()}"></td>
+        <td th:text="${repair.getExecutorName()}"></td>
+        <td th:text="${repair.getRepairDate()}"></td>
+    </tr>
+</table>
+</body>
+</html>
